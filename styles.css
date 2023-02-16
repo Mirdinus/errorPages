@@ -1,0 +1,85 @@
+/* Set document variales */
+:root {
+    --dark: #282c34;
+    --middle: #7F7F7F;
+    --light: #d7d3cb;
+}
+
+body {
+    background-color: var(--dark);
+    color:  var(--light);
+    font-family: 'Consolas', monospace;
+    font-size: 14px;
+    margin: 0;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#number {
+    font-size : clamp(4rem, 20vw, 10rem);
+    font-weight: 100;
+    color: var(--middle);
+    margin: 0;
+    padding: 0;
+    animation: numberColorChange 2s infinite;
+}
+  
+@keyframes numberColorChange {
+    0% {
+        color: var(--middle);
+    }
+    50% {
+        color: var(--light);
+    }
+    1000% {
+        color: var(--middle);
+    }
+}
+
+#text {
+    font-size : clamp(2rem, 10vw, 4rem);
+    font-weight: 100;
+    color: var(--light);
+    margin: 0;
+    padding: 0;
+    animation: textColorChange 2s infinite;
+}
+
+@keyframes textColorChange {
+    0% {
+        color: var(--light);
+    }
+    50% {
+        color: var(--middle);
+    }
+    1000% {
+        color: var(--light);
+    }
+}
+
+.shifter {
+    font-size : clamp(2rem, 10vw, 4rem);
+    font-weight: 100;
+    color: var(--light);
+    margin: 0;
+    padding: 0;
+    animation: shifter 1.5s infinite !important;
+}
+
+@keyframes shifter {
+    0% {
+        color: var(--light);
+    }
+    50% {
+        color: red;
+    }
+    100% {
+        color: var(--light);
+    }
+}
